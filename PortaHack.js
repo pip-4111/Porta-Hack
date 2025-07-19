@@ -5,13 +5,14 @@
 //  Repository(s):
 //     https://github.com/CodyTolene/pip-boy-apps
 //     https://github.com/pip-4111/Porta-Hack
+//     https://github.com/beaverboy-12
 // =============================================================================
 
 function PortaHack() {
   const self = {};
 
   const GAME_NAME = 'Porta Hack';
-  const GAME_VERSION = '1.0.1';
+  const GAME_VERSION = '1.1.0';
   const DEBUG = false;
 
   // Game
@@ -123,7 +124,7 @@ function PortaHack() {
 
   // Video
   const VIDEO_STOPPED = 'videoStopped';
-  const VIDEO_BOOT = 'BOOT/BOOT.avi';
+  const VIDEO_BOOT = 'USER/STARTHACK.avi';
 
   // All available passwords to select from
   // prettier-ignore
@@ -1020,7 +1021,7 @@ function shuffle(arr) {
     });
 
     if (!DEBUG) {
-      Pip.videoStart('BOOT/BOOT.avi', { x: 40 });
+      Pip.videoStart('USER/STARTHACK.avi', { x: 40 });
       Pip.on(VIDEO_STOPPED, startGame);
     } else {
       startGame();
